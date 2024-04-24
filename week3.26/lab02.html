@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>little-game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: bisque;
+      }
+      button {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Guess the Number Game</h1>
+    <p>Guess a number between 1 and 100:</p>
+    <input type="text" id="guessInput" />
+    <button onclick="checkGuess()">Submit Guess</button>
+    <p id="message"></p>
+
+    <script src="guess.js"></script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab01</title>
+    <style>
+      ::placeholder {
+        color: pink;
+        opacity: 1; /* Firefox */
+      }
+
+      ::-ms-input-placeholder {
+        /* Edge 12 -18 */
+        color: black;
+      }
+      input[type="range"] {
+        -webkit-appearance: none;
+        width: 40%;
+        height: 2mm;
+        border-radius: 5px;
+        background: #d3d3d3; /* Grey background */
+        outline: none;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      method="get"
+      action="https://people.cs.nctu.edu.tw/~jmliang/get_post.php" 
+    >
+      <h1>個人資訊調查</h1>
+      <h3>統計截止日期: 3/15</h3>
+      <p>
+        姓名:
+        <input
+          name="name"
+          type="text"
+          required
+          size="20"
+          autocomplete="on"
+        />(必填)
+      </p>
+      <p>
+        學號:
+        <input name="ID" type="text" required size="20" autocomplete="on" />
+      </p>
+      <p>
+        出生日期:
+        <input
+          name="date"
+          type="date"
+          required
+          placeholder="年 /月 / 日"
+          size="20"
+          autocomplete="on"
+        />(yyyy-mm--dd)
+      </p>
+      <p>
+        家庭成員(數):
+        <input
+          name="number"
+          type="number"
+          required
+          step="1"
+          min="0"
+          max="5"
+          placeholder="num"
+          autocomplete="on"
+        />(Enter a number between 0 to 5)
+      </p>
+      <p>
+        平均成績: 0
+        <input name="grade" type="range" step="1" min="0" max="100" />100
+      </p>
+      <p>
+        聯絡方式:
+        <input
+          name="phone"
+          type="tel"
+          required
+          pattern="\(\d{2}\)\d{3}-\d{4}"
+          size="25"
+          autocomplete="on"
+          placeholder="(##)###-####"
+        />(##)###-####
+      </p>
+      <p>
+        聯絡信箱:
+        <input
+          name="email"
+          type="email"
+          required
+          size="25"
+          autocomplete="on"
+          placeholder="(name@domain.com)"
+        />(name@domain.com)
+      </p>
+      <p>
+        個人網頁:
+        <input
+          name="webpage"
+          type="url"
+          size="25"
+          autocomplete="on"
+          placeholder="(http://www.domainname.com)"
+        />(http://www.domainname.com)
+      </p>
+      幸運顏色:
+      <input
+        name="color"
+        type="color"
+        size="25"
+        autocomplete="on"
+      />(Hexadecimal code such as #ADD8E6)
+    </p>
+    <input type="submit" value="submit" />
+    <input type="reset" value="clear">
+    </form>
+  </body>
+</html> 

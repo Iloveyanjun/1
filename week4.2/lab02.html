@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>九九乘法表</title>
+    <style>
+      .table-part {
+        margin-right: 20px;
+      }
+      .table-part td {
+        border: 2px solid pink;
+        padding: 10px;
+        text-align: center;
+      }
+      .clear {
+        clear: both;
+      }
+      h2 {
+        color: blueviolet;
+      }
+      h1 {
+      }
+    </style>
+  </head>
+  <body>
+    <h1>九九乘法表</h1>
+    <div class="table-part">
+      <h2>第一個</h2>
+      <table id="table1"></table>
+    </div>
+    <div class="table-part">
+      <h2>第二個</h2>
+      <table id="table2"></table>
+    </div>
+    <div class="table-part">
+      <h2>第三個</h2>
+      <table id="table3"></table>
+    </div>
+    <div class="table-part">
+      <h2>第四個</h2>
+      <table id="table4"></table>
+    </div>
+    <div class="table-part">
+      <h2>第五個</h2>
+      <table id="table5"></table>
+    </div>
+    <div class="table-part">
+      <h2>第六個</h2>
+      <table id="table6"></table>
+    </div>
+    <div class="table-part">
+      <h2>第七個</h2>
+      <table id="table7"></table>
+    </div>
+    <div class="table-part">
+      <h2>第八個</h2>
+      <table id="table8"></table>
+    </div>
+    <div class="table-part">
+      <h2>第九個</h2>
+      <table id="table9"></table>
+    </div>
+    <div class="clear"></div>
+
+    <script>
+      // Function to generate multiplication table for a given multiplier
+      function generateMultiplicationTable(tableId, multiplier) {
+        const table = document.getElementById(tableId);
+        for (let i = 1; i <= 9; i++) {
+          const row = document.createElement("tr");
+          const cell = document.createElement("td");
+          cell.textContent = multiplier + " × " + i + " = " + multiplier * i;
+          row.appendChild(cell);
+          table.appendChild(row);
+        }
+      }
+      // Generate tables for each multiplier
+      for (let i = 1; i <= 9; i++) {
+        generateMultiplicationTable("table" + i, i);
+      }
+    </script>
+  </body>
+</html>

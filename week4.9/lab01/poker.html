@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards shifting</title>
+    <script></script>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      img {
+        object-fit: cover;
+      }
+    </style>
+    <script>
+      let sound;
+      let button;
+      function start() {
+        sound = document.getElementById("sound");
+        button = document.getElementById("washButton");
+        button.addEventListener("click", wash, false);
+      } // end function start
+      window.addEventListener("load", start, false);
+    </script>
+  </head>
+  <body>
+    <audio id="sound" value="sound">
+      <source src="win.mp3" />
+    </audio>
+    <h2 style="color: blueviolet">Original order:</h2>
+    <table id="Cards shifting">
+      <tr>
+        <td><img src="0.png" alt="" /></td>
+        <td><img src="1.png" alt="" /></td>
+        <td><img src="2.png" alt="" /></td>
+        <td><img src="3.png" alt="" /></td>
+        <td><img src="4.png" alt="" /></td>
+        <td><img src="5.png" alt="" /></td>
+        <td><img src="6.png" alt="" /></td>
+        <td><img src="7.png" alt="" /></td>
+        <td><img src="8.png" alt="" /></td>
+        <td><img src="9.png" alt="" /></td>
+        <td><img src="10.png" alt="" /></td>
+        <td><img src="11.png" alt="" /></td>
+        <td><img src="12.png" alt="" /></td>
+      </tr>
+      <tr>
+        <td><img src="13.png" alt="" /></td>
+        <td><img src="14.png" alt="" /></td>
+        <td><img src="15.png" alt="" /></td>
+        <td><img src="16.png" alt="" /></td>
+        <td><img src="17.png" alt="" /></td>
+        <td><img src="18.png" alt="" /></td>
+        <td><img src="19.png" alt="" /></td>
+        <td><img src="20.png" alt="" /></td>
+        <td><img src="21.png" alt="" /></td>
+        <td><img src="22.png" alt="" /></td>
+        <td><img src="23.png" alt="" /></td>
+        <td><img src="24.png" alt="" /></td>
+        <td><img src="25.png" alt="" /></td>
+      </tr>
+      <tr>
+        <td><img src="26.png" alt="" /></td>
+        <td><img src="27.png" alt="" /></td>
+        <td><img src="28.png" alt="" /></td>
+        <td><img src="29.png" alt="" /></td>
+        <td><img src="30.png" alt="" /></td>
+        <td><img src="31.png" alt="" /></td>
+        <td><img src="32.png" alt="" /></td>
+        <td><img src="33.png" alt="" /></td>
+        <td><img src="34.png" alt="" /></td>
+        <td><img src="35.png" alt="" /></td>
+        <td><img src="36.png" alt="" /></td>
+        <td><img src="37.png" alt="" /></td>
+        <td><img src="38.png" alt="" /></td>
+      </tr>
+      <tr>
+        <td><img src="39.png" alt="" /></td>
+        <td><img src="40.png" alt="" /></td>
+        <td><img src="41.png" alt="" /></td>
+        <td><img src="42.png" alt="" /></td>
+        <td><img src="43.png" alt="" /></td>
+        <td><img src="44.png" alt="" /></td>
+        <td><img src="45.png" alt="" /></td>
+        <td><img src="46.png" alt="" /></td>
+        <td><img src="47.png" alt="" /></td>
+        <td><img src="48.png" alt="" /></td>
+        <td><img src="49.png" alt="" /></td>
+        <td><img src="50.png" alt="" /></td>
+        <td><img src="51.png" alt="" /></td>
+      </tr>
+    </table>
+    <form action="#">
+      <input id="washbutton" type="button" value="wash Cards" />
+    </form>
+    <table id="generate"></table>
+    <script src="function.js"></script>
+  </body>
+</html>
